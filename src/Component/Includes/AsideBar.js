@@ -83,6 +83,61 @@ export default function AsideBar() {
               <LinkName>Request</LinkName>
             </LinkItems>
           </ListTagItem>
+          <ListMainItem>
+            <ListMain>
+              <ImageButtonTag>
+                <TagImages
+                  src={
+                    require("../../assets/images/Property 1=camera.svg").default
+                  }
+                  alt="Image"
+                />
+              </ImageButtonTag>
+              <TagNames>Picture</TagNames>
+            </ListMain>
+
+            <ListMain>
+              <ImageButtonTag>
+                <TagImages
+                  src={
+                    require("../../assets/images/Property 1=vedio.svg").default
+                  }
+                  alt="Image"
+                />
+              </ImageButtonTag>
+              <TagNames>video</TagNames>
+            </ListMain>
+
+            <ListMain>
+              <ImageButtonTag>
+                <TagImages
+                  src={
+                    require("../../assets/images/Property 1=note.svg").default
+                  }
+                  alt="Image"
+                />
+              </ImageButtonTag>
+              <TagNames>document</TagNames>
+            </ListMain>
+
+            <ListMain>
+              <ImageButtonTag>
+                <TagImages
+                  src={
+                    require("../../assets/images/Property 1=sign.svg").default
+                  }
+                  alt="Image"
+                />
+              </ImageButtonTag>
+              <TagNames>Signed</TagNames>
+            </ListMain>
+          </ListMainItem>
+          <Button>
+            <LogoButton>Add Droplet</LogoButton>
+            <ButtonLogo>
+              <LogoButton>Add Droplet</LogoButton>
+            </ButtonLogo>
+          </Button>
         </LeftContainer>
       </SectionContainer>
     </MainContainer>
@@ -166,4 +221,63 @@ const LinkName = styled.p`
   margin-left: 8px;
   color: #727488;
   display: inline-block;
+`;
+
+const ListMainItem = styled.div`
+  padding-top: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 10px; */
+  width: 55%;
+  margin: 0 auto;
+`;
+
+const ListMain = styled(Link)`
+  /* width: 50%; */
+`;
+
+const ImageButtonTag = styled.button`
+  border-radius: 8px;
+  margin-left: 11px;
+  width: 40px;
+  padding: 5px;
+  background: #26273b;
+  border-radius: 2px;
+  border: none;
+  display: block;
+`;
+
+const TagImages = styled.img`
+  width: 100%;
+  display: block;
+`;
+
+const TagNames = styled.p`
+  font-size: 10px;
+  font-family: "dm_sansregular";
+  margin-left: 8px;
+  color: #727488;
+  display: inline-block;
+`;
+
+const Button = styled.div`
+  padding-top: 89px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 42px;
+  align-items: center;
+`;
+
+const ButtonLogo = styled.div`
+  padding-top: 15px;
+  margin-right: 39px;
+`;
+
+const LogoButton = styled.button`
+  padding: 11px 30px;
+  border: 1px solid #000;
+  border-radius: 18px;
+  height: 38px;
+  background-color: #f77958;
 `;
