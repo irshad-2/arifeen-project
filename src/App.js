@@ -14,7 +14,7 @@ function App() {
           <SubContainer>
             <Routes>
               <Route path="/" element={<Main />} />
-              <Route path="loading/" element={<Loading />} />
+              <Route path="/coming-soon" element={<Loading />} />
             </Routes>
           </SubContainer>
         </MainContainer>

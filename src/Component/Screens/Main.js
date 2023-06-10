@@ -78,6 +78,42 @@ function Main() {
           </Right>
         </HeaderContainer>
       </Header>
+
+      <MiddleSection>
+        <HeadSection>
+          <LeftSection>
+            <Head>Hi Mikey!</Head>
+          </LeftSection>
+          <RightSection>
+            <State>
+              <Image
+                src={require("../../assets/images/Component 429.svg").default}
+                alt="image"
+              />
+            </State>
+            <Name>US Sever</Name>
+            <Arrow>
+              <ArrowIcon
+                src={require("../../assets/images/Property 1=down.svg").default}
+                alt="image"
+              />
+            </Arrow>
+
+            <Icon>
+              <IconImage
+                src={require("../../assets/images/Property 1=control.svg").default}
+                alt="image"
+              />
+            </Icon>
+            <DotIcon>
+            <DotImage
+                src={require("../../assets/images/Property 1=menu.svg").default}
+                alt="image"
+              />
+            </DotIcon>
+          </RightSection>
+        </HeadSection>
+      </MiddleSection>
     </MainSection>
   );
 }
@@ -224,4 +260,87 @@ const FrameImage = styled.img`
 const TagImage = styled.img`
   width: 13%;
   display: block;
+`;
+
+
+
+const MiddleSection = styled.div`
+  width: 70%;
+  text-align: center;
+`;
+const HeadSection = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-top: 20px;
+  padding-bottom: 47px; */
+`;
+const LeftSection = styled.div`
+  margin-top: 27px;
+`;
+const Head = styled.h1`
+  font-size: 15px;
+  font-weight: 100;
+  color: #fff;
+  margin-left: 60px;
+`;
+const RightSection = styled.div`
+  display: flex;
+  width: 36%;
+`;
+const State = styled.div`
+
+width:7%;
+`;
+
+const Image = styled.img`
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+  margin: 8px auto;
+`;
+const Name = styled.h1`
+  font-size: 15px;
+  font-weight: 100;
+  margin-left: 7px;
+  color: #67636f;
+  margin-right: 26px;
+
+`;
+const Arrow = styled.div`
+width: 20px;
+margin-right: 10px;
+`;
+
+const ArrowIcon = styled.img`
+display: block;
+  width: 100%;
+  border-radius: 50%;
+  margin: 8px auto;
+`;
+
+const Icon = styled.div`
+width: 20px;
+margin-right: 10px;
+`;
+
+const IconImage = styled.img`
+display: block;
+  width: 100%;
+  border-radius: 50%;
+  margin: 8px auto;
+`;
+
+
+const DotIcon = styled.div`
+width: 20px;
+margin-right: 10px;
+
+`;
+
+const DotImage = styled.img`
+display: block;
+  width: 100%;
+  border-radius: 50%;
+  margin: 9px auto;
 `;

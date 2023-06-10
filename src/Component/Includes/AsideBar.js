@@ -22,7 +22,7 @@ export default function AsideBar() {
                   alt="Image1"
                 />
               </ImageButton>
-              <LinkName>DashBoard</LinkName>
+              <LinkName to="/">DashBoard</LinkName>
             </LinkItems>
             <LinkItems to="">
               <ImageButton>
@@ -33,9 +33,9 @@ export default function AsideBar() {
                   alt="Image1"
                 />
               </ImageButton>
-              <LinkName>All Files</LinkName>
+              <LinkName to="/coming-soon">All Files</LinkName>
             </LinkItems>
-            <LinkItems to="">
+            <LinkItems to="/coming-soon">
               <ImageButton>
                 <LinkImage
                   src={
@@ -44,7 +44,7 @@ export default function AsideBar() {
                   alt="Image1"
                 />
               </ImageButton>
-              <LinkName>Shared</LinkName>
+              <LinkName to="/coming-soon">Shared</LinkName>
             </LinkItems>
 
             <LinkItems to="">
@@ -56,7 +56,7 @@ export default function AsideBar() {
                   alt="Image1"
                 />
               </ImageButton>
-              <LinkName>Favourites</LinkName>
+              <LinkName to="/coming-soon">Favourites</LinkName>
             </LinkItems>
 
             <LinkItems to="">
@@ -68,7 +68,7 @@ export default function AsideBar() {
                   alt="Image1"
                 />
               </ImageButton>
-              <LinkName>Recent</LinkName>
+              <LinkName to="/coming-soon">Recent</LinkName>
             </LinkItems>
 
             <LinkItems to="">
@@ -80,7 +80,7 @@ export default function AsideBar() {
                   alt="Image1"
                 />
               </ImageButton>
-              <LinkName>Request</LinkName>
+              <LinkName to="/coming-soon">Request</LinkName>
             </LinkItems>
           </ListTagItem>
           <ListMainItem>
@@ -157,7 +157,6 @@ const SectionContainer = styled.div`
 const LeftContainer = styled.div`
   height: 100vh;
   background-color: #1b1c30;
-  /* padding-left: 20px; */
   width: 100%;
 `;
 
@@ -187,17 +186,11 @@ const ListTagItem = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* gap: 10px; */
   width: 55%;
   margin: 0 auto;
 `;
 
-const LinkItems = styled(Link)`
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* padding: 5px; */
-  /* width: 20%; */
-`;
+const LinkItems = styled(Link)``;
 
 const ImageButton = styled.button`
   border-radius: 8px;
@@ -215,7 +208,7 @@ const LinkImage = styled.img`
   display: block;
 `;
 
-const LinkName = styled.p`
+const LinkName = styled(Link)`
   font-size: 10px;
   font-family: "dm_sansregular";
   margin-left: 8px;
@@ -228,14 +221,11 @@ const ListMainItem = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* gap: 10px; */
   width: 55%;
   margin: 0 auto;
 `;
 
-const ListMain = styled(Link)`
-  /* width: 50%; */
-`;
+const ListMain = styled(Link)``;
 
 const ImageButtonTag = styled.button`
   border-radius: 8px;
