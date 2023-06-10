@@ -101,12 +101,14 @@ function Main() {
 
             <Icon>
               <IconImage
-                src={require("../../assets/images/Property 1=control.svg").default}
+                src={
+                  require("../../assets/images/Property 1=control.svg").default
+                }
                 alt="image"
               />
             </Icon>
             <DotIcon>
-            <DotImage
+              <DotImage
                 src={require("../../assets/images/Property 1=menu.svg").default}
                 alt="image"
               />
@@ -116,12 +118,37 @@ function Main() {
 
         <StorageSection>
           <Storage>
-          <ListItem>
+            <ListItem>
               <FirstNumber>35/40 </FirstNumber>
               <Name12>GB</Name12>
-              <Name1>storage</Name1>
-              <Name2>+Add More</Name2>
+              <Down>
+                <Name1>Storage</Name1>
+                <Name2>+Add More</Name2>
+              </Down>
             </ListItem>
+
+            <ListItem>
+              <FirstNumber>35/40 </FirstNumber>
+              <Name12>GB</Name12>
+              <Down>
+                <Name1>Storage</Name1>
+                <Name2>+Add More</Name2>
+              </Down>
+            </ListItem>
+            <RightContent>
+              <ButtonTags>
+                <Title>Add Droplet</Title>
+                <ButtonArrow>
+                  <ButtonImage
+                    src={
+                      require("../../assets/images/Property 1=right w.svg")
+                        .default
+                    }
+                    alt="image"
+                  />
+                </ButtonArrow>
+              </ButtonTags>
+            </RightContent>
           </Storage>
         </StorageSection>
       </MiddleSection>
@@ -273,8 +300,6 @@ const TagImage = styled.img`
   display: block;
 `;
 
-
-
 const MiddleSection = styled.div`
   width: 70%;
   text-align: center;
@@ -300,8 +325,7 @@ const RightSection = styled.div`
   width: 36%;
 `;
 const State = styled.div`
-
-width:7%;
+  width: 7%;
 `;
 
 const Image = styled.img`
@@ -316,46 +340,42 @@ const Name = styled.h1`
   margin-left: 7px;
   color: #67636f;
   margin-right: 26px;
-
 `;
 const Arrow = styled.div`
-width: 20px;
-margin-right: 10px;
+  width: 20px;
+  margin-right: 10px;
 `;
 
 const ArrowIcon = styled.img`
-display: block;
+  display: block;
   width: 100%;
   border-radius: 50%;
   margin: 8px auto;
 `;
 
 const Icon = styled.div`
-width: 20px;
-margin-right: 10px;
+  width: 20px;
+  margin-right: 10px;
 `;
 
 const IconImage = styled.img`
-display: block;
+  display: block;
   width: 100%;
   border-radius: 50%;
   margin: 8px auto;
 `;
 
-
 const DotIcon = styled.div`
-width: 20px;
-margin-right: 10px;
-
+  width: 20px;
+  margin-right: 10px;
 `;
 
 const DotImage = styled.img`
-display: block;
+  display: block;
   width: 100%;
   border-radius: 50%;
   margin: 9px auto;
 `;
-
 
 const StorageSection = styled.div`
   background-color: #212236;
@@ -370,25 +390,64 @@ const Storage = styled.div`
   justify-content: space-between;
   margin-top: -43px;
   margin-left: 80px;
-  width: 80%;
+  width: 70%;
 `;
 const ListItem = styled.div`
-
+position: relative;
 `;
 const FirstNumber = styled.span`
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 500;
   color: #fff;
+  margin-right: 41px;
 `;
-const Name12 = styled.span`
- color: #67636f;
- margin-top: 20px;
+const Name12 = styled.small`
+  color: #67636f;
+ position: absolute;
+ bottom: 48px;
+ left: 75px;
+`;
+const Down = styled.div`
+  width: 100%;
+  margin-top: 4px;
 `;
 const Name1 = styled.span`
- font-size: 20px;
-  font-weight: 100;
+  font-size: 12px;
+  font-weight: 400;
   color: #fff;
 `;
 const Name2 = styled.span`
+  font-size: 12px;
+  font-weight: 100;
+  margin-left: 12px;
+  color: #fff;
+`;
+const RightContent = styled.div`
+  margin-left: 10px;
+`;
+const ButtonTags = styled.div`
+  background-color: #fb896b;
+  height: 35px;
+  width: 100%;
+  display: flex;
+  margin-right: 15px;
+`;
+const Title = styled.h1`
+  font-size: 11px;
+  margin-right: 10px;
+  margin-left: 28px;
+  margin-top: 10px;
+  color: #fff;
+`;
 
+const ButtonArrow = styled.div`
+  width: 14%;
+  margin-top: 7px;
+`;
+const ButtonImage = styled.img`
+  width: 100%;
+  display: block;
+  /* position: absolute;
+  top: 0;
+  right: 20px; */
 `;
