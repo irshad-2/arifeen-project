@@ -5,10 +5,7 @@ import { Link } from "react-router-dom";
 
 function Main() {
   return (
-    <GridMain>
-      <SideBar>
-        <Nav />
-      </SideBar>
+    <MainSection>
       <Header>
         <HeaderContainer>
           <Innerbox>
@@ -21,6 +18,7 @@ function Main() {
                   alt="logo"
                 />
               </LinkImageContainer>
+              <Input type="text" placeholder="" />
               <Images>
                 <ImageTag>
                   <StateImage
@@ -34,7 +32,8 @@ function Main() {
                 <ImageTags>
                   <ArrowImage
                     src={
-                      require("../../assets/images/Property 1=arrow.svg").default
+                      require("../../assets/images/Property 1=arrow.svg")
+                        .default
                     }
                     alt="Image"
                   />
@@ -46,71 +45,183 @@ function Main() {
           </Innerbox>
 
           <Middle>
-            <PropertyImage   src={require("../../assets/images/Property 1=night.svg").default}
-              alt="Dark theme image"/>
+            <PropertyImage
+              src={require("../../assets/images/Property 1=night.svg").default}
+              alt="Dark theme image"
+            />
 
-              <BellImage src={require("../../assets/images/Property 1=bell.svg").default}
-              alt="Notification image"/>
+            <BellImage
+              src={require("../../assets/images/Property 1=bell.svg").default}
+              alt="Notification image"
+            />
           </Middle>
 
           <Right>
-            <FrameImage src={require("../../assets/images/Frame 3466889.png").default}
-              alt="frame"/>
+            <ProfileImg>
+              <FrameImage
+                src={require("../../assets/images/Frame 3466889.png")}
+                alt="frame"
+              />
+            </ProfileImg>
 
-            <TagImage  src={require("../../assets/images/Property 1=down.svg").default}
-              alt="arrow"/>
+            <AddImage>
+              <AddImg
+                src={
+                  require("../../assets/images/Property 1=plus w.svg").default
+                }
+              />
+            </AddImage>
+            <TagImage
+              src={require("../../assets/images/Property 1=down.svg").default}
+              alt="arrow"
+            />
           </Right>
-
         </HeaderContainer>
       </Header>
-    </GridMain>
+    </MainSection>
   );
 }
 
 export default Main;
 
-const GridMain = styled.div``;
-
-const SideBar = styled.div``;
-
-const Nav = styled.span``;
+const MainSection = styled.div`
+  background-color: #212236;
+  height: 100vh;
+`;
 
 const Header = styled.div``;
 
-const HeaderContainer = styled.div``;
+const HeaderContainer = styled.div`
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+`;
 
-const Innerbox = styled.div``;
+const Innerbox = styled.div`
+  width: 85%;
+`;
+const Input = styled.input`
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  background: #212236;
+  border: none;
+  outline: none;
+  color: #fff;
+`;
+const Left = styled.div`
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+`;
 
-const Left = styled.div``;
+const LinkImageContainer = styled(Link)`
+  width: 40px;
+`;
 
-const LinkImageContainer = styled(Link)``;
+const LogoImage = styled.img`
+  display: block;
+  width: 40%;
+`;
 
-const LogoImage = styled.img``;
+const Images = styled.div`
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
-const Images = styled.div``
+const ImageTag = styled.div`
+  display: flex;
+  width: 45%;
+  align-items: center;
+  justify-content: space-between;
+`;
 
-const ImageTag = styled.div``
+const StateImage = styled.img`
+  width: 25%;
+  display: block;
+  border-radius: 50%;
+`;
 
-const StateImage = styled.img``
+const StateName = styled.span`
+  font-size: 10px;
+  color: #727488;
+`;
+const ImageTags = styled.div`
+  display: flex;
+  width: 40%;
+  align-items: center;
+`;
+const ArrowImage = styled.img`
+  display: block;
+  width: 25%;
+  background: #24253d;
+  border-radius: 50%;
+  margin-right: 10px;
+`;
 
-const StateName = styled.p``
+const ArrowName = styled.p`
+  color: #727488;
+  font-size: 10px;
+`;
 
-const ImageTags = styled.div``
+const LineTag = styled.hr`
+  border-bottom: 1px solid #727488;
+  width: 100%;
+`;
 
-const ArrowImage = styled.img``
+const Middle = styled.div`
+  width: 10%;
+  padding-right: 20px;
+  display: flex;
+  margin-left: 59px;
+`;
 
-const ArrowName = styled.p``
+const PropertyImage = styled.img`
+  width: 15%;
+  display: flex;
+  margin-right: 10px;
+`;
 
-const  LineTag = styled.hr``
+const BellImage = styled.img`
+  width: 15%;
+  display: block;
+`;
 
-const Middle = styled.div``
+const Right = styled.div`
+  width: 10%;
+  padding-right: 20px;
+  display: flex;
+  position: relative;
+`;
+const ProfileImg = styled.div`
+  width: 30px;
+  margin-right: 10px;
+`;
+const AddImage = styled.div`
+  width: 15px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+`;
+const AddImg = styled.img`
+  width: 100%;
+  display: block;
+  background: #53489c;
+  border: 2px solid #fff;
+  border-radius: 50%;
+`;
+const FrameImage = styled.img`
+  width: 100%;
+  border-radius: 50%;
+  display: block;
+`;
 
-const PropertyImage = styled.img``
-
-const BellImage =styled.img``
-
-const Right = styled.div``
-
-const  FrameImage  = styled.img``
-
-const TagImage  = styled.img``
+const TagImage = styled.img`
+  width: 13%;
+  display: block;
+`;
