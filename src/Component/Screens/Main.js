@@ -113,6 +113,17 @@ function Main() {
             </DotIcon>
           </RightSection>
         </HeadSection>
+
+        <StorageSection>
+          <Storage>
+          <ListItem>
+              <FirstNumber>35/40 </FirstNumber>
+              <Name12>GB</Name12>
+              <Name1>storage</Name1>
+              <Name2>+Add More</Name2>
+            </ListItem>
+          </Storage>
+        </StorageSection>
       </MiddleSection>
     </MainSection>
   );
@@ -343,4 +354,41 @@ display: block;
   width: 100%;
   border-radius: 50%;
   margin: 9px auto;
+`;
+
+
+const StorageSection = styled.div`
+  background-color: #212236;
+  /* margin-left: 30px; */
+  padding-top: 67px;
+  /* padding-right: 20px; */
+  /* height: 117px; */
+  /* border-radius: 10px; */
+`;
+const Storage = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: -43px;
+  margin-left: 80px;
+  width: 80%;
+`;
+const ListItem = styled.div`
+
+`;
+const FirstNumber = styled.span`
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+`;
+const Name12 = styled.span`
+ color: #67636f;
+ margin-top: 20px;
+`;
+const Name1 = styled.span`
+ font-size: 20px;
+  font-weight: 100;
+  color: #fff;
+`;
+const Name2 = styled.span`
+
 `;
