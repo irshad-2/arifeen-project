@@ -152,14 +152,26 @@ function Main() {
           </Storage>
         </StorageSection>
       </MiddleSection>
-    </MainSection>
-  );
+      <GraphSection>
+              <GraphLeft>
+                    <Graph>
+                    <GraphImage
+                      src={require("../../assets/images/graph.png")}
+                      alt="image"
+                    />
+                  </Graph>
+                    
+              </GraphLeft>
+              <GraphRight></GraphRight>
+            </GraphSection>
+      </MainSection>
+    );
 }
 
 export default Main;
 
 const MainSection = styled.div`
-  background-color: #212236;
+  background-color: #1b1c30;
   height: 100vh;
 `;
 
@@ -180,7 +192,7 @@ const Input = styled.input`
   width: 70%;
   padding: 10px;
   font-size: 16px;
-  background: #212236;
+  background: #1b1c30;
   border: none;
   outline: none;
   color: #fff;
@@ -301,15 +313,19 @@ const TagImage = styled.img`
 `;
 
 const MiddleSection = styled.div`
-  width: 70%;
+  width: 55%;
   text-align: center;
+  background-color: #1b1c30;
+ margin-left:40px;
+
 `;
 const HeadSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding-top: 20px;
-  padding-bottom: 47px; */
+ background-color: #212236;
+ border-top-left-radius: 20px;
+ border-top-right-radius: 20px;
 `;
 const LeftSection = styled.div`
   margin-top: 27px;
@@ -379,11 +395,8 @@ const DotImage = styled.img`
 
 const StorageSection = styled.div`
   background-color: #212236;
-  /* margin-left: 30px; */
   padding-top: 67px;
-  /* padding-right: 20px; */
-  /* height: 117px; */
-  /* border-radius: 10px; */
+
 `;
 const Storage = styled.div`
   display: flex;
@@ -393,7 +406,7 @@ const Storage = styled.div`
   width: 70%;
 `;
 const ListItem = styled.div`
-position: relative;
+  position: relative;
 `;
 const FirstNumber = styled.span`
   font-size: 24px;
@@ -402,25 +415,26 @@ const FirstNumber = styled.span`
   margin-right: 41px;
 `;
 const Name12 = styled.small`
-  color: #67636f;
- position: absolute;
- bottom: 48px;
- left: 75px;
+  color: #727186;
+  position: absolute;
+  bottom: 48px;
+  left: 75px;
 `;
 const Down = styled.div`
   width: 100%;
   margin-top: 4px;
+  margin-bottom: 20px
 `;
 const Name1 = styled.span`
   font-size: 12px;
   font-weight: 400;
-  color: #fff;
+  color: #c0c0c6;
 `;
 const Name2 = styled.span`
   font-size: 12px;
   font-weight: 100;
   margin-left: 12px;
-  color: #fff;
+  color: #595787;
 `;
 const RightContent = styled.div`
   margin-left: 10px;
@@ -431,6 +445,7 @@ const ButtonTags = styled.div`
   width: 100%;
   display: flex;
   margin-right: 15px;
+  cursor: pointer;
 `;
 const Title = styled.h1`
   font-size: 11px;
@@ -447,7 +462,22 @@ const ButtonArrow = styled.div`
 const ButtonImage = styled.img`
   width: 100%;
   display: block;
-  /* position: absolute;
-  top: 0;
-  right: 20px; */
+`;
+
+const GraphSection = styled.div`
+
+`;
+const GraphLeft = styled.div`
+
+`;
+const Graph = styled.div`
+width: 25%;
+margin-left: 37px;
+`;
+const GraphImage = styled.img`
+width: 100%;
+display: block;
+`;
+const GraphRight = styled.div`
+
 `;

@@ -156,7 +156,7 @@ const SectionContainer = styled.div`
 
 const LeftContainer = styled.div`
   height: 100vh;
-  background-color: #1b1c30;
+  background-color: #212236;
   width: 100%;
 `;
 
@@ -270,4 +270,5 @@ const LogoButton = styled.button`
   border-radius: 18px;
   height: 38px;
   background-color: #f77958;
+  cursor: pointer;
 `;
