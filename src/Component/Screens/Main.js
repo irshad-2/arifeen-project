@@ -151,24 +151,26 @@ function Main() {
             </RightContent>
           </Storage>
         </StorageSection>
-      </MiddleSection>
-      <GraphSection>
-              <GraphLeft>
-                    <Graph>
-                    <GraphImage
-                      src={require("../../assets/images/graph.png")}
-                      alt="image"
-                    />
-                  </Graph>
-             <ImageBares>
-             <Recent>
-                  <Commit>Recently Commits</Commit>
-                </Recent>
+        <GraphSection className="graph">
+          <GraphLeft>
+            <Graph>
+              <GraphImage
+                src={require("../../assets/images/graph.png")}
+                alt="image"
+              />
+            </Graph>
+            <ImageBares>
+              <Recent>
+                <Commit>Recently Commits</Commit>
+              </Recent>
               <Items>
                 <Leftitems>
                   <ImageBar>
                     <CatImage
-                      src={require("../../assets/images/Property 1=cat.svg").default}
+                      src={
+                        require("../../assets/images/Property 1=cat.svg")
+                          .default
+                      }
                       alt="image"
                     />
                   </ImageBar>
@@ -185,7 +187,10 @@ function Main() {
                 <Leftitems>
                   <ImageBar>
                     <CatImage
-                      src={require("../../assets/images/Property 1=cat.svg").default}
+                      src={
+                        require("../../assets/images/Property 1=cat.svg")
+                          .default
+                      }
                       alt="image"
                     />
                   </ImageBar>
@@ -202,7 +207,10 @@ function Main() {
                 <Leftitems>
                   <ImageBar>
                     <CatImage
-                      src={require("../../assets/images/Property 1=trash b.svg").default}
+                      src={
+                        require("../../assets/images/Property 1=trash b.svg")
+                          .default
+                      }
                       alt="image"
                     />
                   </ImageBar>
@@ -212,7 +220,7 @@ function Main() {
                   </MiddleBar>
                 </Leftitems>
                 <MbTags>
-                  <Mb>12MB</Mb>
+                  <Mb></Mb>
                 </MbTags>
               </Items>
 
@@ -220,7 +228,10 @@ function Main() {
                 <Leftitems>
                   <ImageBar>
                     <CatImage
-                      src={require("../../assets/images/Property 1=trash b.svg").default}
+                      src={
+                        require("../../assets/images/Property 1=trash b.svg")
+                          .default
+                      }
                       alt="image"
                     />
                   </ImageBar>
@@ -237,7 +248,10 @@ function Main() {
                 <Leftitems>
                   <ImageBar>
                     <CatImage
-                      src={require("../../assets/images/Property 1=cat.svg").default}
+                      src={
+                        require("../../assets/images/Property 1=cat.svg")
+                          .default
+                      }
                       alt="image"
                     />
                   </ImageBar>
@@ -255,7 +269,10 @@ function Main() {
                 <Leftitems>
                   <ImageBar>
                     <CatImage
-                      src={require("../../assets/images/Property 1=trash b.svg").default}
+                      src={
+                        require("../../assets/images/Property 1=trash b.svg")
+                          .default
+                      }
                       alt="image"
                     />
                   </ImageBar>
@@ -269,11 +286,67 @@ function Main() {
                 </MbTags>
               </Items>
             </ImageBares>
-              </GraphLeft>
-              <GraphRight></GraphRight>
-            </GraphSection>
-      </MainSection>
-    );
+          </GraphLeft>
+          <GraphRight>
+            <BorderSection>
+              <Droplet>
+                <Lefts>
+                  <DropName>Droplet 1</DropName>
+                  <Time1>78.43%</Time1>
+                  <Time2>2.35%</Time2>
+                </Lefts>
+                <TimeTag>
+                  <TimeImage
+                    src={require("../../assets/images/image4.png")}
+                    alt="image"
+                  />
+                </TimeTag>
+              </Droplet>
+              <Droplet>
+                <Lefts>
+                  <DropName>Droplet 1</DropName>
+                  <Time1>78.43%</Time1>
+                  <Time2>2.35%</Time2>
+                </Lefts>
+                <TimeTag>
+                  <TimeImage
+                    src={require("../../assets/images/image2.png")}
+                    alt="image"
+                  />
+                </TimeTag>
+              </Droplet>
+              <Droplet>
+                <Lefts>
+                  <DropName>Droplet 1</DropName>
+                  <Time1>78.43%</Time1>
+                  <Time2>2.35%</Time2>
+                </Lefts>
+                <TimeTag>
+                  <TimeImage
+                    src={require("../../assets/images/newmode.png")}
+                    alt="image"
+                  />
+                </TimeTag>
+              </Droplet>
+              <Droplet>
+                <Lefts>
+                  <DropName>Droplet 1</DropName>
+                  <Time1>78.43%</Time1>
+                  <Time2>2.35%</Time2>
+                </Lefts>
+                <TimeTag>
+                  <TimeImage
+                    src={require("../../assets/images/image4.png")}
+                    alt="image"
+                  />
+                </TimeTag>
+              </Droplet>
+            </BorderSection>
+          </GraphRight>
+        </GraphSection>
+      </MiddleSection>
+    </MainSection>
+  );
 }
 
 export default Main;
@@ -424,31 +497,29 @@ const MiddleSection = styled.div`
   width: 55%;
   text-align: center;
   background-color: #1b1c30;
- margin-left:40px;
-
+  margin-left: 40px;
 `;
 const HeadSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
- background-color: #212236;
- border-top-left-radius: 20px;
- border-top-right-radius: 20px;
+  background-color: #212236;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 `;
 const LeftSection = styled.div`
   margin-top: 27px;
 `;
 const Head = styled.h1`
- font-size: 15px;
-    font-weight: 100;
-    color: #fff;
-    margin-left: 22px;
-    margin-top: -22px;
+  font-size: 15px;
+  font-weight: 100;
+  color: #fff;
+  margin-left: 22px;
+  margin-top: -22px;
 `;
 const RightSection = styled.div`
   display: flex;
   width: 27%;
-
 `;
 const State = styled.div`
   width: 7%;
@@ -506,7 +577,6 @@ const DotImage = styled.img`
 const StorageSection = styled.div`
   background-color: #212236;
   padding-top: 60px;
-
 `;
 const Storage = styled.div`
   display: flex;
@@ -533,7 +603,7 @@ const Name12 = styled.small`
 const Down = styled.div`
   width: 100%;
   margin-top: 4px;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 `;
 const Name1 = styled.span`
   font-size: 12px;
@@ -575,78 +645,115 @@ const ButtonImage = styled.img`
 `;
 
 const GraphSection = styled.div`
-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 `;
 const GraphLeft = styled.div`
-
+  width: 50%;
 `;
 const Graph = styled.div`
-width: 30%;
-margin-left: 37px;
+  width: 100%;
 `;
 const GraphImage = styled.img`
-width: 100%;
-display: block;
+  width: 100%;
+  display: block;
 `;
 
 const ImageBares = styled.div`
-margin-left: 62px;
-  width: 50%;
+  width: 100%;
 `;
 const Items = styled.div`
-width: 65%;
-margin-bottom: 15px;
-display: flex;
+  width: 65%;
+  margin-bottom: 15px;
+  display: flex;
+  margin-left: 20px;
 `;
 const Recent = styled.div`
-    margin-top: 10px;
-    margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 `;
 const Commit = styled.h1`
-font-size:10px;
-color: #d0cfd3;
+  font-size: 10px;
+  color: #d0cfd3;
+  display: flex;
 `;
 const Leftitems = styled.div`
-width: 50%;
-display: flex;
+  width: 64%;
+  display: flex;
 `;
 const ImageBar = styled.div`
-width: 50px;
-background-color: #252639;
+  width: 32px;
+  background-color: #252639;
 `;
 const CatImage = styled.img`
-width: 100%;
+  width: 100%;
   display: block;
   height: 40px;
   border-radius: 20px;
 `;
 const MiddleBar = styled.div`
-width: 70%;
-/* display: flex; */
-margin-left: 10px;
+  width: 70%;
+  /* margin-left: 10px; */
 `;
 const Code = styled.small`
-font-size: 10px;
- font-weight: 200;
- color: #36374b;
- display: contents;
+  font-size: 10px;
+  font-weight: 200;
+  color: #36374b;
+  /* display: contents; */
 `;
 const Time = styled.span`
-display: flex;
-color: #464e6b;
-font-size: 10px;
+  display: block;
+  color: #464e6b;
+  font-size: 10px;
 `;
 const MbTags = styled.div`
-margin-left: 50px;
+  margin-left: 50px;
 `;
 const Mb = styled.small`
-font-size: 12px;
-  font-weight:400;
+  font-size: 12px;
+  font-weight: 400;
   color: #505774;
 `;
 
-
-
 const GraphRight = styled.div`
-
+  width: 50%;
+`;
+const BorderSection = styled.div``;
+const Droplet = styled.div`
+  display: flex;
+  justify-content: space-between;
+  /* border-radius: 30px; */
+  background: 1px solid;
+  background-color: #212236;
+  padding-top: 10px;
+`;
+const Lefts = styled.div`
+  width: 70%;
+  margin-right: 30px;
+`;
+const DropName = styled.small`
+  font-size: 20px;
+  font-weight: 200;
+  color: #67636f;
+`;
+const Time1 = styled.h2`
+  font-size: 30px;
+  margin-top: -1px;
+  color: #fff;
+`;
+const Time2 = styled.small`
+  font-size: 10px;
+  color: #fb896b;
+  margin-top: 10px;
+`;
+const TimeTag = styled.div`
+  width: 90%;
+  margin-left: 50px;
+ 
+`;
+const TimeImage = styled.img`
+  width: 100%;
+  display: block;
+  border-bottom-right-radius: 20px;
 `;
