@@ -160,7 +160,115 @@ function Main() {
                       alt="image"
                     />
                   </Graph>
-                    
+             <ImageBares>
+             <Recent>
+                  <Commit>Recently Commits</Commit>
+                </Recent>
+              <Items>
+                <Leftitems>
+                  <ImageBar>
+                    <CatImage
+                      src={require("../../assets/images/Property 1=cat.svg").default}
+                      alt="image"
+                    />
+                  </ImageBar>
+                  <MiddleBar>
+                    <Code>dcf2b99</Code>
+                    <Time>10 oct,10:23pm</Time>
+                  </MiddleBar>
+                </Leftitems>
+                <MbTags>
+                  <Mb>12MB</Mb>
+                </MbTags>
+              </Items>
+              <Items>
+                <Leftitems>
+                  <ImageBar>
+                    <CatImage
+                      src={require("../../assets/images/Property 1=cat.svg").default}
+                      alt="image"
+                    />
+                  </ImageBar>
+                  <MiddleBar>
+                    <Code>75075fa</Code>
+                    <Time>10 oct,10:23pm</Time>
+                  </MiddleBar>
+                </Leftitems>
+                <MbTags>
+                  <Mb>12MB</Mb>
+                </MbTags>
+              </Items>
+              <Items>
+                <Leftitems>
+                  <ImageBar>
+                    <CatImage
+                      src={require("../../assets/images/Property 1=trash b.svg").default}
+                      alt="image"
+                    />
+                  </ImageBar>
+                  <MiddleBar>
+                    <Code>8936e01</Code>
+                    <Time>10 oct,10:23pm</Time>
+                  </MiddleBar>
+                </Leftitems>
+                <MbTags>
+                  <Mb>12MB</Mb>
+                </MbTags>
+              </Items>
+
+              <Items>
+                <Leftitems>
+                  <ImageBar>
+                    <CatImage
+                      src={require("../../assets/images/Property 1=trash b.svg").default}
+                      alt="image"
+                    />
+                  </ImageBar>
+                  <MiddleBar>
+                    <Code>6d5ddel</Code>
+                    <Time>10 oct,10:23pm</Time>
+                  </MiddleBar>
+                </Leftitems>
+                <MbTags>
+                  <Mb>12MB</Mb>
+                </MbTags>
+              </Items>
+              <Items>
+                <Leftitems>
+                  <ImageBar>
+                    <CatImage
+                      src={require("../../assets/images/Property 1=cat.svg").default}
+                      alt="image"
+                    />
+                  </ImageBar>
+                  <MiddleBar>
+                    <Code>ef65505</Code>
+                    <Time>10 oct,10:23pm</Time>
+                  </MiddleBar>
+                </Leftitems>
+                <MbTags>
+                  <Mb>12MB</Mb>
+                </MbTags>
+              </Items>
+
+              <Items>
+                <Leftitems>
+                  <ImageBar>
+                    <CatImage
+                      src={require("../../assets/images/Property 1=trash b.svg").default}
+                      alt="image"
+                    />
+                  </ImageBar>
+                  <MiddleBar>
+                    <Code>67efafc</Code>
+                    <Time>10 oct,10:23pm</Time>
+                  </MiddleBar>
+                </Leftitems>
+                <MbTags>
+                  <Mb>12MB</Mb>
+                </MbTags>
+              </Items>
+            </ImageBares>
               </GraphLeft>
               <GraphRight></GraphRight>
             </GraphSection>
@@ -331,14 +439,16 @@ const LeftSection = styled.div`
   margin-top: 27px;
 `;
 const Head = styled.h1`
-  font-size: 15px;
-  font-weight: 100;
-  color: #fff;
-  margin-left: 60px;
+ font-size: 15px;
+    font-weight: 100;
+    color: #fff;
+    margin-left: 22px;
+    margin-top: -22px;
 `;
 const RightSection = styled.div`
   display: flex;
-  width: 36%;
+  width: 27%;
+
 `;
 const State = styled.div`
   width: 7%;
@@ -348,7 +458,7 @@ const Image = styled.img`
   display: block;
   width: 100%;
   border-radius: 50%;
-  margin: 8px auto;
+  margin: 13px auto;
 `;
 const Name = styled.h1`
   font-size: 15px;
@@ -395,15 +505,15 @@ const DotImage = styled.img`
 
 const StorageSection = styled.div`
   background-color: #212236;
-  padding-top: 67px;
+  padding-top: 60px;
 
 `;
 const Storage = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: -43px;
-  margin-left: 80px;
-  width: 70%;
+  margin-top: -49px;
+  margin-left: 32px;
+  width: 92%;
 `;
 const ListItem = styled.div`
   position: relative;
@@ -417,7 +527,7 @@ const FirstNumber = styled.span`
 const Name12 = styled.small`
   color: #727186;
   position: absolute;
-  bottom: 48px;
+  bottom: 66px;
   left: 75px;
 `;
 const Down = styled.div`
@@ -465,19 +575,78 @@ const ButtonImage = styled.img`
 `;
 
 const GraphSection = styled.div`
-
+width: 100%;
 `;
 const GraphLeft = styled.div`
 
 `;
 const Graph = styled.div`
-width: 25%;
+width: 30%;
 margin-left: 37px;
 `;
 const GraphImage = styled.img`
 width: 100%;
 display: block;
 `;
+
+const ImageBares = styled.div`
+margin-left: 62px;
+  width: 50%;
+`;
+const Items = styled.div`
+width: 65%;
+margin-bottom: 15px;
+display: flex;
+`;
+const Recent = styled.div`
+    margin-top: 10px;
+    margin-bottom: 15px;
+`;
+const Commit = styled.h1`
+font-size:10px;
+color: #d0cfd3;
+`;
+const Leftitems = styled.div`
+width: 50%;
+display: flex;
+`;
+const ImageBar = styled.div`
+width: 50px;
+background-color: #252639;
+`;
+const CatImage = styled.img`
+width: 100%;
+  display: block;
+  height: 40px;
+  border-radius: 20px;
+`;
+const MiddleBar = styled.div`
+width: 70%;
+/* display: flex; */
+margin-left: 10px;
+`;
+const Code = styled.small`
+font-size: 10px;
+ font-weight: 200;
+ color: #36374b;
+ display: contents;
+`;
+const Time = styled.span`
+display: flex;
+color: #464e6b;
+font-size: 10px;
+`;
+const MbTags = styled.div`
+margin-left: 50px;
+`;
+const Mb = styled.small`
+font-size: 12px;
+  font-weight:400;
+  color: #505774;
+`;
+
+
+
 const GraphRight = styled.div`
 
 `;
