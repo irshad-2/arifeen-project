@@ -784,16 +784,16 @@ position: absolute;
   width: 25%;
 `;
 const BackGround = styled.div`
-  background: #51459f;
+  background: #52459f;
   display: flex;
   width: 90%;
   border-radius: 30px;
   padding-left: 40px;
 `;
 const OutLetSection = styled.div`
- height: 200px;
+ height: 187px;
   width: 100%;
-  margin-left: 5px;
+  margin-left: -15px;
 `;
 const HeadLine = styled.h3`
 font-size: 15px;
@@ -802,14 +802,17 @@ font-size: 15px;
 const TimeLine = styled.h6`
   font-size: 15px;
   color: #fff;
+  margin-top: 10px;
 `;
 const SubHeading = styled.p`
- font-size: 15px;
+  font-size: 15px;
   color: #fff;
+   margin-top: -18px;
+    padding-bottom: 6px;
 `;
 const ButtonLag = styled.button`
- height: 19%;
-  width: 47%;
+ height: 17%;
+  width: 34%;
   background-color: #fff;
   border-radius: 10px;
 `;
