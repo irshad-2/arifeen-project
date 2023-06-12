@@ -443,7 +443,32 @@ function Main() {
                 <SideName>24GB</SideName>
               </SubSection>
             </ButtonBar>
-            
+            <ButtonBar>
+              <ImageBarr>
+                <Bar1>
+                  <Image1
+                    src={
+                      require("../../assets/images/Property 1=FILE O.svg")
+                        .default
+                    }
+                    alt="image"
+                  />
+                </Bar1>
+                <Bar2>
+                  <Image2
+                    src={
+                      require("../../assets/images/Property 1=menu.svg").default
+                    }
+                    alt="image"
+                  />
+                </Bar2>
+              </ImageBarr>
+              <HeadName>RUBY</HeadName>
+              <SubSection>
+                <SubName>17 Projects</SubName>
+                <SideName>24GB</SideName>
+              </SubSection>
+            </ButtonBar>
           </Folders>
         </RightContainer>
       </SideSec>
