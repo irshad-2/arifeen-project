@@ -345,9 +345,24 @@ function Main() {
           </GraphRight>
         </GraphSection>
       </MiddleSection>
+
+      <SideSec>
+        <RightContainer>
+          <BackGround>
+            <OutLetSection>
+              <HeadLine>Current Subscription plan</HeadLine>
+              <TimeLine>$ 1325.00</TimeLine>
+              <SubHeading>Company Plus</SubHeading>
+              <ButtonLag>Change Plan</ButtonLag>                
+            </OutLetSection>
+          </BackGround>
+        </RightContainer>
+        
+
+       </SideSec>
     </MainSection>
-  );
-}
+     );
+   }
 
 export default Main;
 
@@ -723,7 +738,6 @@ const BorderSection = styled.div``;
 const Droplet = styled.div`
   display: flex;
   justify-content: space-between;
-  /* border-radius: 30px; */
   background: 1px solid;
   background-color: #212236;
   padding-top: 10px;
@@ -757,3 +771,51 @@ const TimeImage = styled.img`
   display: block;
   border-bottom-right-radius: 20px;
 `;
+
+const SideSec = styled.div`
+
+`;
+const RightContainer = styled.div`
+position: absolute;
+  top: 20%;
+  right: 5%;
+  bottom: 0%;
+  height: 80px;
+  width: 25%;
+`;
+const BackGround = styled.div`
+  background: #51459f;
+  display: flex;
+  width: 90%;
+  border-radius: 30px;
+  padding-left: 40px;
+`;
+const OutLetSection = styled.div`
+ height: 200px;
+  width: 100%;
+  margin-left: 5px;
+`;
+const HeadLine = styled.h3`
+font-size: 15px;
+  color: #fff;
+`;
+const TimeLine = styled.h6`
+  font-size: 15px;
+  color: #fff;
+`;
+const SubHeading = styled.p`
+ font-size: 15px;
+  color: #fff;
+`;
+const ButtonLag = styled.button`
+ height: 19%;
+  width: 47%;
+  background-color: #fff;
+  border-radius: 10px;
+`;
+
+
+
+
+
+
