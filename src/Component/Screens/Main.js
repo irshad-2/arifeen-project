@@ -470,6 +470,20 @@ function Main() {
               </SubSection>
             </ButtonBar>
           </Folders>
+          <Bottomsection>
+            <MainBar>
+              <MainHeading>
+                Invite 2 friends and get 5GB extra space.
+              </MainHeading>
+              <ButtonTag>Invite Now!</ButtonTag>
+            </MainBar>
+            <ImageSection>
+              <Image3
+                src={require("../../assets/images/Frame 3466890.png")}
+                alt="Image"
+              />
+            </ImageSection>
+          </Bottomsection>
         </RightContainer>
       </SideSec>
     </MainSection>
@@ -621,7 +635,7 @@ const TagImage = styled.img`
 `;
 
 const MiddleSection = styled.div`
-  width: 55%;
+  width: 59%;
   text-align: center;
   background-color: #1b1c30;
   margin-left: 40px;
@@ -816,7 +830,6 @@ const ImageBar = styled.div`
 const CatImage = styled.img`
   width: 100%;
   display: block;
-  height: 40px;
   border-radius: 20px;
 `;
 const MiddleBar = styled.div`
@@ -841,6 +854,8 @@ const Mb = styled.small`
   font-size: 12px;
   font-weight: 400;
   color: #505774;
+  margin-left: 30px;
+  margin-right: -150px;
 `;
 
 const GraphRight = styled.div`
@@ -864,7 +879,7 @@ const DropName = styled.small`
   color: #67636f;
 `;
 const Time1 = styled.h2`
-  font-size: 30px;
+  font-size: 20px;
   margin-top: -1px;
   color: #fff;
 `;
@@ -874,8 +889,9 @@ const Time2 = styled.small`
   margin-top: 10px;
 `;
 const TimeTag = styled.div`
-  width: 90%;
-  margin-left: 50px;
+  width: 55%;
+  margin-left: 44px;
+  margin-right: 40px;
 `;
 const TimeImage = styled.img`
   width: 100%;
@@ -888,19 +904,19 @@ const RightContainer = styled.div`
   position: absolute;
   top: 20%;
   right: 5%;
-  bottom: 0%;
-  height: 80px;
-  width: 25%;
+  width: 23%;
+  margin-top: -34px;
 `;
 const BackGround = styled.div`
   background: #52459f;
   display: flex;
   width: 90%;
-  border-radius: 30px;
+  border-radius: 18px;
   padding-left: 40px;
+  height: 22vh;
 `;
 const OutLetSection = styled.div`
-  height: 187px;
+  height: 169px;
   width: 100%;
   margin-left: -15px;
 `;
@@ -911,12 +927,12 @@ const HeadLine = styled.h3`
 const TimeLine = styled.h6`
   font-size: 26px;
   color: #fff;
-  margin-top: 22px;
+  margin-top: 15px;
 `;
 const SubHeading = styled.p`
   font-size: 15px;
   color: #fff;
-  margin-top: -39px;
+  margin-top: -45px;
   /* padding-bottom: 6px; */
 `;
 const ButtonLag = styled.button`
@@ -926,7 +942,6 @@ const ButtonLag = styled.button`
   border-radius: 10px;
 `;
 const ImageBars = styled.div`
-  height: 200px;
   width: 100%;
 `;
 const SideImage = styled.img`
@@ -939,11 +954,11 @@ const Folders = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 25px;
 `;
 const ButtonBar = styled.div`
   width: 48%;
-  height: 128px;
+  height: 119px;
   background-color: #26273b;
   border: 5px;
   border-radius: 10%;
@@ -994,4 +1009,37 @@ const SideName = styled.small`
   color: #727488;
   margin-right: 10px;
   margin-bottom: 3px;
+`;
+const Bottomsection = styled.div`
+  background: #51459f;
+  width: 95%;
+  border-radius: 12px;
+  display: flex;
+`;
+const MainBar = styled.div`
+  margin-left: 50px;
+  height: 100%;
+  width: 60%;
+  text-align: start;
+  margin-top: 10px;
+`;
+const MainHeading = styled.small`
+  font-size: 15px;
+  color: #fff;
+`;
+const ButtonTag = styled.button`
+  margin-top: 8px;
+  background-color: #84e9f4;
+  border-radius: 10px;
+  padding: 8px 19px;
+`;
+const ImageSection = styled.div`
+  height: 90%;
+  width: 34%;
+`;
+const Image3 = styled.img`
+  width: 100%;
+  display: block;
+  border-radius: 30px;
+  height: 100%;
 `;
