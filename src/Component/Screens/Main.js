@@ -353,16 +353,49 @@ function Main() {
               <HeadLine>Current Subscription plan</HeadLine>
               <TimeLine>$ 1325.00</TimeLine>
               <SubHeading>Company Plus</SubHeading>
-              <ButtonLag>Change Plan</ButtonLag>                
+              <ButtonLag>Change Plan</ButtonLag>
             </OutLetSection>
+            <ImageBars>
+              <SideImage
+                src={require("../../assets/images/Frame 3466680.png")}
+                alt="image"
+              />
+            </ImageBars>
           </BackGround>
-        </RightContainer>
-        
 
-       </SideSec>
+          <Folders>
+            <ButtonBar>
+              <ImageBarr>
+                <Bar1>
+                  <Image1
+                    src={
+                      require("../../assets/images/Property 1=FILE B.svg")
+                        .default
+                    }
+                    alt="image"
+                  />
+                </Bar1>
+                <Bar2>
+                  <Image2
+                    src={
+                      require("../../assets/images/Property 1=menu.svg").default
+                    }
+                    alt="image"
+                  />
+                </Bar2>
+              </ImageBarr>
+              <HeadName>Python</HeadName>
+              <SubSection>
+                <SubName>14 Projects</SubName>
+                <SideName>24GB</SideName>
+              </SubSection>
+            </ButtonBar>
+          </Folders>
+        </RightContainer>
+      </SideSec>
     </MainSection>
-     );
-   }
+  );
+}
 
 export default Main;
 
@@ -764,7 +797,6 @@ const Time2 = styled.small`
 const TimeTag = styled.div`
   width: 90%;
   margin-left: 50px;
- 
 `;
 const TimeImage = styled.img`
   width: 100%;
@@ -772,11 +804,9 @@ const TimeImage = styled.img`
   border-bottom-right-radius: 20px;
 `;
 
-const SideSec = styled.div`
-
-`;
+const SideSec = styled.div``;
 const RightContainer = styled.div`
-position: absolute;
+  position: absolute;
   top: 20%;
   right: 5%;
   bottom: 0%;
@@ -791,34 +821,98 @@ const BackGround = styled.div`
   padding-left: 40px;
 `;
 const OutLetSection = styled.div`
- height: 187px;
+  height: 187px;
   width: 100%;
   margin-left: -15px;
 `;
 const HeadLine = styled.h3`
-font-size: 15px;
+  font-size: 9px;
   color: #fff;
 `;
 const TimeLine = styled.h6`
-  font-size: 15px;
+  font-size: 26px;
   color: #fff;
-  margin-top: 10px;
+  margin-top: 22px;
 `;
 const SubHeading = styled.p`
   font-size: 15px;
   color: #fff;
-   margin-top: -18px;
-    padding-bottom: 6px;
+  margin-top: -39px;
+  /* padding-bottom: 6px; */
 `;
 const ButtonLag = styled.button`
- height: 17%;
-  width: 34%;
+  height: 17%;
+  width: 56%;
   background-color: #fff;
   border-radius: 10px;
 `;
-
-
-
-
-
-
+const ImageBars = styled.div`
+  height: 200px;
+  width: 100%;
+`;
+const SideImage = styled.img`
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 25px;
+`;
+const Folders = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+`;
+const ButtonBar = styled.div`
+  width: 48%;
+  height: 128px;
+  background-color: #26273b;
+  border: 5px;
+  border-radius: 10%;
+  margin-bottom: 20px;
+`;
+const ImageBarr = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+const Bar1 = styled.div`
+  width: 25%;
+  margin-left: 4px;
+`;
+const Image1 = styled.img`
+  width: 100%;
+  display: block;
+`;
+const Bar2 = styled.div`
+  width: 8%;
+  margin-right: 7px;
+`;
+const Image2 = styled.img`
+  width: 100%;
+  display: block;
+`;
+const HeadName = styled.h6`
+  font-size: 18px;
+  text-align: start;
+  margin-top: 5px;
+  color: #fff;
+  margin-left: 6px;
+`;
+const SubSection = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -26px;
+`;
+const SubName = styled.small`
+  font-size: 12px;
+  color: #727488;
+  margin-left: 9px;
+  margin-top: -10px;
+`;
+const SideName = styled.small`
+  font-size: 12px;
+  color: #727488;
+  margin-right: 10px;
+  margin-bottom: 3px;
+`;
