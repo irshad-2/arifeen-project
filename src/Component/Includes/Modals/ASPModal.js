@@ -4,10 +4,10 @@ import { styled } from "styled-components";
 export default function ASPModal({ onClose }) {
   return (
     <Modal onClick={() => onClose()}>
-      <ModalContent onClick={(e) => e.stopPropagation()}>ASP</ModalContent>
-      <ModalContent onClick={(e) => e.stopPropagation()}>ASP</ModalContent>
-      <ModalContent onClick={(e) => e.stopPropagation()}>ASP</ModalContent>
-      <ModalContent onClick={(e) => e.stopPropagation()}>ASP</ModalContent>
+      <ModalContent onClick={(e) => e.stopPropagation()}>Hello</ModalContent>
+      <ModalContent onClick={(e) => e.stopPropagation()}>World</ModalContent>
+      <ModalContent onClick={(e) => e.stopPropagation()}>Hai</ModalContent>
+      <ModalContent onClick={(e) => e.stopPropagation()}>Kriz</ModalContent>
       <ModalContent onClick={(e) => e.stopPropagation()}>ASP</ModalContent>
     </Modal>
   );
@@ -22,6 +22,8 @@ const Modal = styled.div`
   top: 0;
   bottom: 0;
   z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
 `;
 const ModalContent = styled.div`
   background: #fff;
