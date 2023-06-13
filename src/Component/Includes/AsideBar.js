@@ -157,7 +157,8 @@ const SectionContainer = styled.div`
 const LeftContainer = styled.div`
   height: 100vh;
   background-color: #212236;
-  width: 100%;
+  /* width: 100%; */
+    
 `;
 
 const TagContainer = styled.div`
@@ -214,6 +215,7 @@ const LinkName = styled(Link)`
   margin-left: 8px;
   color: #727488;
   display: inline-block;
+  border: none;
 `;
 
 const ListMainItem = styled.div`

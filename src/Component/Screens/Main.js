@@ -1,492 +1,507 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import AsideBar from "../Includes/AsideBar";
 import { Link } from "react-router-dom";
+import PythonModal from "../Includes/Modals/PythonModal";
 
-function Main() {
+function Main({ setOpen }) {
   return (
-    <MainSection>
-      <Header>
-        <HeaderContainer>
-          <Innerbox>
-            <Left>
-              <LinkImageContainer>
-                <LogoImage
-                  src={
-                    require("../../assets/images/Property 1=serach.svg").default
-                  }
-                  alt="logo"
+    <>
+      <MainSection>
+        <Header>
+          <HeaderContainer>
+            <Innerbox>
+              <Left>
+                <LinkImageContainer>
+                  <LogoImage
+                    src={
+                      require("../../assets/images/Property 1=serach.svg")
+                        .default
+                    }
+                    alt="logo"
+                  />
+                </LinkImageContainer>
+                <Input type="text" placeholder="" />
+                <Images>
+                  <ImageTag>
+                    <StateImage
+                      src={
+                        require("../../assets/images/Component 429.svg").default
+                      }
+                      alt="Image"
+                    />
+                    <StateName>United States</StateName>
+                  </ImageTag>
+                  <ImageTags>
+                    <ArrowImage
+                      src={
+                        require("../../assets/images/Property 1=arrow.svg")
+                          .default
+                      }
+                      alt="Image"
+                    />
+                    <ArrowName>87%</ArrowName>
+                  </ImageTags>
+                </Images>
+              </Left>
+              <LineTag></LineTag>
+            </Innerbox>
+
+            <Middle>
+              <PropertyImage
+                src={
+                  require("../../assets/images/Property 1=night.svg").default
+                }
+                alt="Dark theme image"
+              />
+
+              <BellImage
+                src={require("../../assets/images/Property 1=bell.svg").default}
+                alt="Notification image"
+              />
+            </Middle>
+
+            <Right>
+              <ProfileImg>
+                <FrameImage
+                  src={require("../../assets/images/Frame 3466889.png")}
+                  alt="frame"
                 />
-              </LinkImageContainer>
-              <Input type="text" placeholder="" />
-              <Images>
-                <ImageTag>
-                  <StateImage
-                    src={
-                      require("../../assets/images/Component 429.svg").default
-                    }
-                    alt="Image"
-                  />
-                  <StateName>United States</StateName>
-                </ImageTag>
-                <ImageTags>
-                  <ArrowImage
-                    src={
-                      require("../../assets/images/Property 1=arrow.svg")
-                        .default
-                    }
-                    alt="Image"
-                  />
-                  <ArrowName>87%</ArrowName>
-                </ImageTags>
-              </Images>
-            </Left>
-            <LineTag></LineTag>
-          </Innerbox>
+              </ProfileImg>
 
-          <Middle>
-            <PropertyImage
-              src={require("../../assets/images/Property 1=night.svg").default}
-              alt="Dark theme image"
-            />
-
-            <BellImage
-              src={require("../../assets/images/Property 1=bell.svg").default}
-              alt="Notification image"
-            />
-          </Middle>
-
-          <Right>
-            <ProfileImg>
-              <FrameImage
-                src={require("../../assets/images/Frame 3466889.png")}
-                alt="frame"
-              />
-            </ProfileImg>
-
-            <AddImage>
-              <AddImg
-                src={
-                  require("../../assets/images/Property 1=plus w.svg").default
-                }
-              />
-            </AddImage>
-            <TagImage
-              src={require("../../assets/images/Property 1=down.svg").default}
-              alt="arrow"
-            />
-          </Right>
-        </HeaderContainer>
-      </Header>
-
-      <MiddleSection>
-        <HeadSection>
-          <LeftSection>
-            <Head>Hi Mikey!</Head>
-          </LeftSection>
-          <RightSection>
-            <State>
-              <Image
-                src={require("../../assets/images/Component 429.svg").default}
-                alt="image"
-              />
-            </State>
-            <Name>US Sever</Name>
-            <Arrow>
-              <ArrowIcon
+              <AddImage>
+                <AddImg
+                  src={
+                    require("../../assets/images/Property 1=plus w.svg").default
+                  }
+                />
+              </AddImage>
+              <TagImage
                 src={require("../../assets/images/Property 1=down.svg").default}
-                alt="image"
+                alt="arrow"
               />
-            </Arrow>
+            </Right>
+          </HeaderContainer>
+        </Header>
 
-            <Icon>
-              <IconImage
-                src={
-                  require("../../assets/images/Property 1=control.svg").default
-                }
-                alt="image"
-              />
-            </Icon>
-            <DotIcon>
-              <DotImage
-                src={require("../../assets/images/Property 1=menu.svg").default}
-                alt="image"
-              />
-            </DotIcon>
-          </RightSection>
-        </HeadSection>
+        <MiddleSection>
+          <HeadSection>
+            <LeftSection>
+              <Head>Hi Mikey!</Head>
+            </LeftSection>
+            <RightSection>
+              <State>
+                <Image
+                  src={require("../../assets/images/Component 429.svg").default}
+                  alt="image"
+                />
+              </State>
+              <Name>US Sever</Name>
+              <Arrow>
+                <ArrowIcon
+                  src={
+                    require("../../assets/images/Property 1=down.svg").default
+                  }
+                  alt="image"
+                />
+              </Arrow>
 
-        <StorageSection>
-          <Storage>
-            <ListItem>
-              <FirstNumber>35/40 </FirstNumber>
-              <Name12>GB</Name12>
-              <Down>
-                <Name1>Storage</Name1>
-                <Name2>+Add More</Name2>
-              </Down>
-            </ListItem>
+              <Icon>
+                <IconImage
+                  src={
+                    require("../../assets/images/Property 1=control.svg")
+                      .default
+                  }
+                  alt="image"
+                />
+              </Icon>
+              <DotIcon>
+                <DotImage
+                  src={
+                    require("../../assets/images/Property 1=menu.svg").default
+                  }
+                  alt="image"
+                />
+              </DotIcon>
+            </RightSection>
+          </HeadSection>
 
-            <ListItem>
-              <FirstNumber>35/40 </FirstNumber>
-              <Name12>GB</Name12>
-              <Down>
-                <Name1>Storage</Name1>
-                <Name2>+Add More</Name2>
-              </Down>
-            </ListItem>
-            <RightContent>
-              <ButtonTags>
-                <Title>Add Droplet</Title>
-                <ButtonArrow>
-                  <ButtonImage
-                    src={
-                      require("../../assets/images/Property 1=right w.svg")
-                        .default
-                    }
-                    alt="image"
-                  />
-                </ButtonArrow>
-              </ButtonTags>
-            </RightContent>
-          </Storage>
-        </StorageSection>
-        <GraphSection className="graph">
-          <GraphLeft>
-            <Graph>
-              <GraphImage
-                src={require("../../assets/images/graph.png")}
-                alt="image"
-              />
-            </Graph>
-            <ImageBares>
-              <Recent>
-                <Commit>Recently Commits</Commit>
-              </Recent>
-              <Items>
-                <Leftitems>
-                  <ImageBar>
-                    <CatImage
+          <StorageSection>
+            <Storage>
+              <ListItem>
+                <FirstNumber>35/40 </FirstNumber>
+                <Name12>GB</Name12>
+                <Down>
+                  <Name1>Storage</Name1>
+                  <Name2>+Add More</Name2>
+                </Down>
+              </ListItem>
+
+              <ListItem>
+                <FirstNumber>35/40 </FirstNumber>
+                <Name12>GB</Name12>
+                <Down>
+                  <Name1>Storage</Name1>
+                  <Name2>+Add More</Name2>
+                </Down>
+              </ListItem>
+              <RightContent>
+                <ButtonTags>
+                  <Title>Add Droplet</Title>
+                  <ButtonArrow>
+                    <ButtonImage
                       src={
-                        require("../../assets/images/Property 1=cat.svg")
+                        require("../../assets/images/Property 1=right w.svg")
                           .default
                       }
                       alt="image"
                     />
-                  </ImageBar>
-                  <MiddleBar>
-                    <Code>dcf2b99</Code>
-                    <Time>10 oct,10:23pm</Time>
-                  </MiddleBar>
-                </Leftitems>
-                <MbTags>
-                  <Mb>12MB</Mb>
-                </MbTags>
-              </Items>
-              <Items>
-                <Leftitems>
-                  <ImageBar>
-                    <CatImage
+                  </ButtonArrow>
+                </ButtonTags>
+              </RightContent>
+            </Storage>
+          </StorageSection>
+          <GraphSection className="graph">
+            <GraphLeft>
+              <Graph>
+                <GraphImage
+                  src={require("../../assets/images/graph.png")}
+                  alt="image"
+                />
+              </Graph>
+              <ImageBares>
+                <Recent>
+                  <Commit>Recently Commits</Commit>
+                </Recent>
+                <Items>
+                  <Leftitems>
+                    <ImageBar>
+                      <CatImage
+                        src={
+                          require("../../assets/images/Property 1=cat.svg")
+                            .default
+                        }
+                        alt="image"
+                      />
+                    </ImageBar>
+                    <MiddleBar>
+                      <Code>dcf2b99</Code>
+                      <Time>10 oct,10:23pm</Time>
+                    </MiddleBar>
+                  </Leftitems>
+                  <MbTags>
+                    <Mb>12MB</Mb>
+                  </MbTags>
+                </Items>
+                <Items>
+                  <Leftitems>
+                    <ImageBar>
+                      <CatImage
+                        src={
+                          require("../../assets/images/Property 1=cat.svg")
+                            .default
+                        }
+                        alt="image"
+                      />
+                    </ImageBar>
+                    <MiddleBar>
+                      <Code>75075fa</Code>
+                      <Time>10 oct,10:23pm</Time>
+                    </MiddleBar>
+                  </Leftitems>
+                  <MbTags>
+                    <Mb>12MB</Mb>
+                  </MbTags>
+                </Items>
+                <Items>
+                  <Leftitems>
+                    <ImageBar>
+                      <CatImage
+                        src={
+                          require("../../assets/images/Property 1=trash b.svg")
+                            .default
+                        }
+                        alt="image"
+                      />
+                    </ImageBar>
+                    <MiddleBar>
+                      <Code>8936e01</Code>
+                      <Time>10 oct,10:23pm</Time>
+                    </MiddleBar>
+                  </Leftitems>
+                  <MbTags>
+                    <Mb></Mb>
+                  </MbTags>
+                </Items>
+
+                <Items>
+                  <Leftitems>
+                    <ImageBar>
+                      <CatImage
+                        src={
+                          require("../../assets/images/Property 1=trash b.svg")
+                            .default
+                        }
+                        alt="image"
+                      />
+                    </ImageBar>
+                    <MiddleBar>
+                      <Code>6d5ddel</Code>
+                      <Time>10 oct,10:23pm</Time>
+                    </MiddleBar>
+                  </Leftitems>
+                  <MbTags>
+                    <Mb>12MB</Mb>
+                  </MbTags>
+                </Items>
+                <Items>
+                  <Leftitems>
+                    <ImageBar>
+                      <CatImage
+                        src={
+                          require("../../assets/images/Property 1=cat.svg")
+                            .default
+                        }
+                        alt="image"
+                      />
+                    </ImageBar>
+                    <MiddleBar>
+                      <Code>ef65505</Code>
+                      <Time>10 oct,10:23pm</Time>
+                    </MiddleBar>
+                  </Leftitems>
+                  <MbTags>
+                    <Mb>12MB</Mb>
+                  </MbTags>
+                </Items>
+
+                <Items>
+                  <Leftitems>
+                    <ImageBar>
+                      <CatImage
+                        src={
+                          require("../../assets/images/Property 1=trash b.svg")
+                            .default
+                        }
+                        alt="image"
+                      />
+                    </ImageBar>
+                    <MiddleBar>
+                      <Code>67efafc</Code>
+                      <Time>10 oct,10:23pm</Time>
+                    </MiddleBar>
+                  </Leftitems>
+                  <MbTags>
+                    <Mb>12MB</Mb>
+                  </MbTags>
+                </Items>
+              </ImageBares>
+            </GraphLeft>
+            <GraphRight>
+              <BorderSection>
+                <Droplet>
+                  <Lefts>
+                    <DropName>Droplet 1</DropName>
+                    <Time1>78.43%</Time1>
+                    <Time2>2.35%</Time2>
+                  </Lefts>
+                  <TimeTag>
+                    <TimeImage
+                      src={require("../../assets/images/image4.png")}
+                      alt="image"
+                    />
+                  </TimeTag>
+                </Droplet>
+                <Droplet>
+                  <Lefts>
+                    <DropName>Droplet 2</DropName>
+                    <Time1>86.01%</Time1>
+                    <Time2>5.35%</Time2>
+                  </Lefts>
+                  <TimeTag>
+                    <TimeImage
+                      src={require("../../assets/images/image2.png")}
+                      alt="image"
+                    />
+                  </TimeTag>
+                </Droplet>
+                <Droplet>
+                  <Lefts>
+                    <DropName>Droplet 3</DropName>
+                    <Time1>94.35%</Time1>
+                    <Time2>2.35%</Time2>
+                  </Lefts>
+                  <TimeTag>
+                    <TimeImage
+                      src={require("../../assets/images/newmode.png")}
+                      alt="image"
+                    />
+                  </TimeTag>
+                </Droplet>
+                <Droplet>
+                  <Lefts>
+                    <DropName>Droplet 4</DropName>
+                    <Time1>44.21%</Time1>
+                    <Time2>2.35%</Time2>
+                  </Lefts>
+                  <TimeTag>
+                    <TimeImage
+                      src={require("../../assets/images/image4.png")}
+                      alt="image"
+                    />
+                  </TimeTag>
+                </Droplet>
+              </BorderSection>
+            </GraphRight>
+          </GraphSection>
+        </MiddleSection>
+
+        <SideSec>
+          <RightContainer>
+            <BackGround>
+              <OutLetSection>
+                <HeadLine>Current Subscription plan</HeadLine>
+                <TimeLine>$ 1325.00</TimeLine>
+                <SubHeading>Company Plus</SubHeading>
+                <ButtonLag>Change Plan</ButtonLag>
+              </OutLetSection>
+              <ImageBars>
+                <SideImage
+                  src={require("../../assets/images/Frame 3466680.png")}
+                  alt="image"
+                />
+              </ImageBars>
+            </BackGround>
+
+            <Folders>
+              <ButtonBar onClick={() => setOpen("python")}>
+                <ImageBarr>
+                  <Bar1>
+                    <Image1
                       src={
-                        require("../../assets/images/Property 1=cat.svg")
+                        require("../../assets/images/Property 1=FILE B.svg")
                           .default
                       }
                       alt="image"
                     />
-                  </ImageBar>
-                  <MiddleBar>
-                    <Code>75075fa</Code>
-                    <Time>10 oct,10:23pm</Time>
-                  </MiddleBar>
-                </Leftitems>
-                <MbTags>
-                  <Mb>12MB</Mb>
-                </MbTags>
-              </Items>
-              <Items>
-                <Leftitems>
-                  <ImageBar>
-                    <CatImage
+                  </Bar1>
+                  <Bar2>
+                    <Image2
                       src={
-                        require("../../assets/images/Property 1=trash b.svg")
+                        require("../../assets/images/Property 1=menu.svg")
                           .default
                       }
                       alt="image"
                     />
-                  </ImageBar>
-                  <MiddleBar>
-                    <Code>8936e01</Code>
-                    <Time>10 oct,10:23pm</Time>
-                  </MiddleBar>
-                </Leftitems>
-                <MbTags>
-                  <Mb></Mb>
-                </MbTags>
-              </Items>
+                  </Bar2>
+                </ImageBarr>
+                <HeadName>Python</HeadName>
+                <SubSection>
+                  <SubName>14 Projects</SubName>
+                  <SideName>24GB</SideName>
+                </SubSection>
+              </ButtonBar>
 
-              <Items>
-                <Leftitems>
-                  <ImageBar>
-                    <CatImage
+              <ButtonBar onClick={() => setOpen("PHP")}>
+                <ImageBarr>
+                  <Bar1>
+                    <Image1
                       src={
-                        require("../../assets/images/Property 1=trash b.svg")
+                        require("../../assets/images/Property 1=FILE O.svg")
                           .default
                       }
                       alt="image"
                     />
-                  </ImageBar>
-                  <MiddleBar>
-                    <Code>6d5ddel</Code>
-                    <Time>10 oct,10:23pm</Time>
-                  </MiddleBar>
-                </Leftitems>
-                <MbTags>
-                  <Mb>12MB</Mb>
-                </MbTags>
-              </Items>
-              <Items>
-                <Leftitems>
-                  <ImageBar>
-                    <CatImage
+                  </Bar1>
+                  <Bar2>
+                    <Image2
                       src={
-                        require("../../assets/images/Property 1=cat.svg")
+                        require("../../assets/images/Property 1=menu.svg")
                           .default
                       }
                       alt="image"
                     />
-                  </ImageBar>
-                  <MiddleBar>
-                    <Code>ef65505</Code>
-                    <Time>10 oct,10:23pm</Time>
-                  </MiddleBar>
-                </Leftitems>
-                <MbTags>
-                  <Mb>12MB</Mb>
-                </MbTags>
-              </Items>
-
-              <Items>
-                <Leftitems>
-                  <ImageBar>
-                    <CatImage
+                  </Bar2>
+                </ImageBarr>
+                <HeadName>PHP</HeadName>
+                <SubSection>
+                  <SubName>21 Projects</SubName>
+                  <SideName>24GB</SideName>
+                </SubSection>
+              </ButtonBar>
+              <ButtonBar onClick={() => setOpen("ASP")}>
+                <ImageBarr>
+                  <Bar1>
+                    <Image1
                       src={
-                        require("../../assets/images/Property 1=trash b.svg")
+                        require("../../assets/images/Property 1=FILE O.svg")
                           .default
                       }
                       alt="image"
                     />
-                  </ImageBar>
-                  <MiddleBar>
-                    <Code>67efafc</Code>
-                    <Time>10 oct,10:23pm</Time>
-                  </MiddleBar>
-                </Leftitems>
-                <MbTags>
-                  <Mb>12MB</Mb>
-                </MbTags>
-              </Items>
-            </ImageBares>
-          </GraphLeft>
-          <GraphRight>
-            <BorderSection>
-              <Droplet>
-                <Lefts>
-                  <DropName>Droplet 1</DropName>
-                  <Time1>78.43%</Time1>
-                  <Time2>2.35%</Time2>
-                </Lefts>
-                <TimeTag>
-                  <TimeImage
-                    src={require("../../assets/images/image4.png")}
-                    alt="image"
-                  />
-                </TimeTag>
-              </Droplet>
-              <Droplet>
-                <Lefts>
-                  <DropName>Droplet 1</DropName>
-                  <Time1>78.43%</Time1>
-                  <Time2>2.35%</Time2>
-                </Lefts>
-                <TimeTag>
-                  <TimeImage
-                    src={require("../../assets/images/image2.png")}
-                    alt="image"
-                  />
-                </TimeTag>
-              </Droplet>
-              <Droplet>
-                <Lefts>
-                  <DropName>Droplet 1</DropName>
-                  <Time1>78.43%</Time1>
-                  <Time2>2.35%</Time2>
-                </Lefts>
-                <TimeTag>
-                  <TimeImage
-                    src={require("../../assets/images/newmode.png")}
-                    alt="image"
-                  />
-                </TimeTag>
-              </Droplet>
-              <Droplet>
-                <Lefts>
-                  <DropName>Droplet 1</DropName>
-                  <Time1>78.43%</Time1>
-                  <Time2>2.35%</Time2>
-                </Lefts>
-                <TimeTag>
-                  <TimeImage
-                    src={require("../../assets/images/image4.png")}
-                    alt="image"
-                  />
-                </TimeTag>
-              </Droplet>
-            </BorderSection>
-          </GraphRight>
-        </GraphSection>
-      </MiddleSection>
-
-      <SideSec>
-        <RightContainer>
-          <BackGround>
-            <OutLetSection>
-              <HeadLine>Current Subscription plan</HeadLine>
-              <TimeLine>$ 1325.00</TimeLine>
-              <SubHeading>Company Plus</SubHeading>
-              <ButtonLag>Change Plan</ButtonLag>
-            </OutLetSection>
-            <ImageBars>
-              <SideImage
-                src={require("../../assets/images/Frame 3466680.png")}
-                alt="image"
-              />
-            </ImageBars>
-          </BackGround>
-
-          <Folders>
-            <ButtonBar>
-              <ImageBarr>
-                <Bar1>
-                  <Image1
-                    src={
-                      require("../../assets/images/Property 1=FILE B.svg")
-                        .default
-                    }
-                    alt="image"
-                  />
-                </Bar1>
-                <Bar2>
-                  <Image2
-                    src={
-                      require("../../assets/images/Property 1=menu.svg").default
-                    }
-                    alt="image"
-                  />
-                </Bar2>
-              </ImageBarr>
-              <HeadName>Python</HeadName>
-              <SubSection>
-                <SubName>14 Projects</SubName>
-                <SideName>24GB</SideName>
-              </SubSection>
-            </ButtonBar>
-
-            <ButtonBar>
-              <ImageBarr>
-                <Bar1>
-                  <Image1
-                    src={
-                      require("../../assets/images/Property 1=FILE O.svg")
-                        .default
-                    }
-                    alt="image"
-                  />
-                </Bar1>
-                <Bar2>
-                  <Image2
-                    src={
-                      require("../../assets/images/Property 1=menu.svg").default
-                    }
-                    alt="image"
-                  />
-                </Bar2>
-              </ImageBarr>
-              <HeadName>PHP</HeadName>
-              <SubSection>
-                <SubName>21 Projects</SubName>
-                <SideName>24GB</SideName>
-              </SubSection>
-            </ButtonBar>
-            <ButtonBar>
-              <ImageBarr>
-                <Bar1>
-                  <Image1
-                    src={
-                      require("../../assets/images/Property 1=FILE O.svg")
-                        .default
-                    }
-                    alt="image"
-                  />
-                </Bar1>
-                <Bar2>
-                  <Image2
-                    src={
-                      require("../../assets/images/Property 1=menu.svg").default
-                    }
-                    alt="image"
-                  />
-                </Bar2>
-              </ImageBarr>
-              <HeadName>ASP</HeadName>
-              <SubSection>
-                <SubName>19 Projects</SubName>
-                <SideName>24GB</SideName>
-              </SubSection>
-            </ButtonBar>
-            <ButtonBar>
-              <ImageBarr>
-                <Bar1>
-                  <Image1
-                    src={
-                      require("../../assets/images/Property 1=FILE O.svg")
-                        .default
-                    }
-                    alt="image"
-                  />
-                </Bar1>
-                <Bar2>
-                  <Image2
-                    src={
-                      require("../../assets/images/Property 1=menu.svg").default
-                    }
-                    alt="image"
-                  />
-                </Bar2>
-              </ImageBarr>
-              <HeadName>RUBY</HeadName>
-              <SubSection>
-                <SubName>17 Projects</SubName>
-                <SideName>24GB</SideName>
-              </SubSection>
-            </ButtonBar>
-          </Folders>
-          <Bottomsection>
-            <MainBar>
-              <MainHeading>
-                Invite 2 friends and get 5GB extra space.
-              </MainHeading>
-              <ButtonTag>Invite Now!</ButtonTag>
-            </MainBar>
-            <ImageSection>
-              <Image3
-                src={require("../../assets/images/Frame 3466890.png")}
-                alt="Image"
-              />
-            </ImageSection>
-          </Bottomsection>
-        </RightContainer>
-      </SideSec>
-    </MainSection>
+                  </Bar1>
+                  <Bar2>
+                    <Image2
+                      src={
+                        require("../../assets/images/Property 1=menu.svg")
+                          .default
+                      }
+                      alt="image"
+                    />
+                  </Bar2>
+                </ImageBarr>
+                <HeadName>ASP</HeadName>
+                <SubSection>
+                  <SubName>19 Projects</SubName>
+                  <SideName>24GB</SideName>
+                </SubSection>
+              </ButtonBar>
+              <ButtonBar onClick={() => setOpen("Ruby")}>
+                <ImageBarr>
+                  <Bar1>
+                    <Image1
+                      src={
+                        require("../../assets/images/Property 1=FILE O.svg")
+                          .default
+                      }
+                      alt="image"
+                    />
+                  </Bar1>
+                  <Bar2>
+                    <Image2
+                      src={
+                        require("../../assets/images/Property 1=menu.svg")
+                          .default
+                      }
+                      alt="image"
+                    />
+                  </Bar2>
+                </ImageBarr>
+                <HeadName>RUBY</HeadName>
+                <SubSection>
+                  <SubName>17 Projects</SubName>
+                  <SideName>24GB</SideName>
+                </SubSection>
+              </ButtonBar>
+            </Folders>
+            <Bottomsection>
+              <MainBar>
+                <MainHeading>
+                  Invite 2 friends and get 5GB extra space.
+                </MainHeading>
+                <ButtonTag>Invite Now!</ButtonTag>
+              </MainBar>
+              <ImageSection>
+                <Image3
+                  src={require("../../assets/images/Frame 3466890.png")}
+                  alt="Image"
+                />
+              </ImageSection>
+            </Bottomsection>
+          </RightContainer>
+        </SideSec>
+      </MainSection>
+    </>
   );
 }
 
@@ -867,14 +882,14 @@ const Droplet = styled.div`
   justify-content: space-between;
   background: 1px solid;
   background-color: #212236;
-  padding-top: 10px;
+  padding-top: 17px;
 `;
 const Lefts = styled.div`
   width: 70%;
-  margin-right: 30px;
+  margin-right: 70px;
 `;
 const DropName = styled.small`
-  font-size: 20px;
+  font-size: 10px;
   font-weight: 200;
   color: #67636f;
 `;
@@ -903,7 +918,7 @@ const SideSec = styled.div``;
 const RightContainer = styled.div`
   position: absolute;
   top: 20%;
-  right: 5%;
+  right: 7%;
   width: 23%;
   margin-top: -34px;
 `;
@@ -911,9 +926,8 @@ const BackGround = styled.div`
   background: #52459f;
   display: flex;
   width: 90%;
-  border-radius: 18px;
+  border-radius: 30px;
   padding-left: 40px;
-  height: 22vh;
 `;
 const OutLetSection = styled.div`
   height: 169px;
@@ -942,6 +956,7 @@ const ButtonLag = styled.button`
   border-radius: 10px;
 `;
 const ImageBars = styled.div`
+  height: 200px;
   width: 100%;
 `;
 const SideImage = styled.img`
@@ -958,11 +973,12 @@ const Folders = styled.div`
 `;
 const ButtonBar = styled.div`
   width: 48%;
-  height: 119px;
+  height: 128px;
   background-color: #26273b;
   border: 5px;
   border-radius: 10%;
   margin-bottom: 20px;
+  cursor: pointer;
 `;
 const ImageBarr = styled.div`
   display: flex;
