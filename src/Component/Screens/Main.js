@@ -968,6 +968,7 @@ const ButtonLag = styled.button`
   width: 56%;
   background-color: #fff;
   border-radius: 10px;
+  cursor: pointer;
 
   @media all and (max-width: 1380px) {
     width: 56%;
@@ -975,6 +976,7 @@ const ButtonLag = styled.button`
     border-radius: 10px;
     height: none;
     font-size: 10px;
+    cursor: pointer;
   }
 `;
 const ImageBars = styled.div`
@@ -1105,6 +1107,7 @@ const ButtonTag = styled.button`
   background-color: #84e9f4;
   border-radius: 10px;
   padding: 8px 19px;
+  cursor: pointer;
 `;
 const ImageSection = styled.div`
   height: 90%;
