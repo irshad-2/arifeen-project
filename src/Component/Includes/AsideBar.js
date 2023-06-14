@@ -158,7 +158,6 @@ const LeftContainer = styled.div`
   height: 100vh;
   background-color: #212236;
   /* width: 100%; */
-    
 `;
 
 const TagContainer = styled.div`
@@ -189,6 +188,18 @@ const ListTagItem = styled.div`
   justify-content: space-between;
   width: 55%;
   margin: 0 auto;
+  @media all and (max-width: 1380px) {
+    display: flex;
+    padding-top: 7px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 55%;
+    margin: 0 auto;
+  }
+  @media all and (max-width: 768px){
+
+}
+
 `;
 
 const LinkItems = styled(Link)``;
@@ -211,11 +222,11 @@ const LinkImage = styled.img`
 
 const LinkName = styled(Link)`
   font-size: 10px;
-  font-family: "dm_sansregular";
   margin-left: 8px;
   color: #727488;
   display: inline-block;
   border: none;
+  text-decoration: none;
 `;
 
 const ListMainItem = styled.div`
@@ -247,10 +258,10 @@ const TagImages = styled.img`
 
 const TagNames = styled.p`
   font-size: 10px;
-  font-family: "dm_sansregular";
   margin-left: 8px;
   color: #727488;
   display: inline-block;
+  text-decoration: none;
 `;
 
 const Button = styled.div`
@@ -259,6 +270,7 @@ const Button = styled.div`
   flex-wrap: wrap;
   padding-left: 42px;
   align-items: center;
+  text-decoration: none;
 `;
 
 const ButtonLogo = styled.div`

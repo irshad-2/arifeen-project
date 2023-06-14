@@ -1,12 +1,6 @@
-.App {
-  text-align: center;
+body {
+  font-family: "DM Sans";
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -28,46 +22,54 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+a {
+  text-decoration: none;
+}
+
+
+@font-face {
+  font-family: 'Quantico';
+  src: url('./assets/fonts/Quantico-Bold.woff2') format('woff2'),
+      url('./assets/fonts/Quantico-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'dm_sansregular';
-  src: url('./assets/fonts/dmsans-regular-webfont.woff2') format('woff2'),
-       url('./assets/fonts/dmsans-regular-webfont.woff') format('woff');
+  font-family: 'Quantico';
+  src: url('./assets/fonts/Quantico-Regular.woff2') format('woff2'),
+      url('./assets/fonts/Quantico-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'dm_sansbold';
-  src: url('./assets/fonts/dmsans-bold-webfont.woff2') format('woff2'),
-       url('./assets/fonts/dmsans-bold-webfont.woff') format('woff');
-  font-weight: bold;
-  font-style: bold;
-
-}
-
-@font-face {
-  font-family: 'quantico_regular';
-  src: url('./assets/fonts/quantico-regular-webfont.woff2') format('woff2'),
-       url('./assets/fonts/quantico-regular-webfont.woff') format('woff');
+  font-family: 'DM Sans';
+  src: url('./assets/fonts/DMSans-Regular.woff2') format('woff2'),
+      url('./assets/fonts/DMSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'quantico_bold';
-  src: url('./assets/fonts/quantico-bold-webfont.woff2') format('woff2'),
-       url('./assets/fonts/quantico-bold-webfont.woff') format('woff');
-  font-weight: bold;
-  font-style: bold;
+  font-family: 'DM Sans';
+  src: url('./assets/fonts/DMSans-Medium.woff2') format('woff2'),
+      url('./assets/fonts/DMSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('./assets/fonts/DMSans-Bold.woff2') format('woff2'),
+      url('./assets/fonts/DMSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+

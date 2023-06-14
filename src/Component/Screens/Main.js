@@ -129,7 +129,8 @@ function Main({ setOpen }) {
           <StorageSection>
             <Storage>
               <ListItem>
-                <FirstNumber>35/40 </FirstNumber>
+                <FirstNumber>35</FirstNumber>
+                <SecondNumber>/40</SecondNumber>
                 <Name12>GB</Name12>
                 <Down>
                   <Name1>Storage</Name1>
@@ -138,7 +139,8 @@ function Main({ setOpen }) {
               </ListItem>
 
               <ListItem>
-                <FirstNumber>35/40 </FirstNumber>
+                <FirstNumber>35</FirstNumber>
+                <SecondNumber>/40</SecondNumber>
                 <Name12>GB</Name12>
                 <Down>
                   <Name1>Storage</Name1>
@@ -746,15 +748,21 @@ const ListItem = styled.div`
 `;
 const FirstNumber = styled.span`
   font-size: 24px;
-  font-weight: 500;
   color: #fff;
-  margin-right: 41px;
+  font-family: "Quantico";
+  font-weight: normal;
+`;
+const SecondNumber = styled.span`
+  font-size: 24px;
+  color: #fff;
+  opacity: 0.5;
+  font-family: "Quantico";
 `;
 const Name12 = styled.small`
   color: #727186;
   position: absolute;
   bottom: 66px;
-  left: 75px;
+  left: 90px;
 `;
 const Down = styled.div`
   width: 100%;
@@ -882,7 +890,8 @@ const Droplet = styled.div`
   justify-content: space-between;
   background: 1px solid;
   background-color: #212236;
-  padding-top: 17px;
+  padding-top: 27px;
+  font-family: "Quabtico";
 `;
 const Lefts = styled.div`
   width: 70%;
@@ -933,6 +942,11 @@ const OutLetSection = styled.div`
   height: 169px;
   width: 100%;
   margin-left: -15px;
+  @media all and (max-width: 1380px) {
+    height: none;
+    width: 100%;
+    margin-left: -15px;
+  }
 `;
 const HeadLine = styled.h3`
   font-size: 9px;
@@ -954,10 +968,22 @@ const ButtonLag = styled.button`
   width: 56%;
   background-color: #fff;
   border-radius: 10px;
+
+  @media all and (max-width: 1380px) {
+    width: 56%;
+    background-color: #fff;
+    border-radius: 10px;
+    height: none;
+    font-size: 10px;
+  }
 `;
 const ImageBars = styled.div`
   height: 200px;
   width: 100%;
+  @media all and (max-width: 1380px) {
+    height: none;
+    width: 100%;
+  }
 `;
 const SideImage = styled.img`
   width: 100%;
@@ -970,6 +996,12 @@ const Folders = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 25px;
+  @media all and (max-width: 1380px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
 `;
 const ButtonBar = styled.div`
   width: 48%;
@@ -979,6 +1011,14 @@ const ButtonBar = styled.div`
   border-radius: 10%;
   margin-bottom: 20px;
   cursor: pointer;
+  @media all and (max-width: 1380px) {
+    width: 48%;
+    height: none;
+    background-color: #26273b;
+    border: 5px;
+    border-radius: 10%;
+    margin-bottom: 12px;
+  }
 `;
 const ImageBarr = styled.div`
   display: flex;
@@ -1007,12 +1047,25 @@ const HeadName = styled.h6`
   margin-top: 5px;
   color: #fff;
   margin-left: 6px;
+  @media all and (max-width: 1380px) {
+    font-size: 16px;
+    text-align: start;
+    margin-top: 18px;
+    color: #fff;
+    margin-left: 7px;
+  }
 `;
 const SubSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: -26px;
+  @media all and (max-width: 1380px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -15px;
+  }
 `;
 const SubName = styled.small`
   font-size: 12px;
@@ -1042,6 +1095,10 @@ const MainBar = styled.div`
 const MainHeading = styled.small`
   font-size: 15px;
   color: #fff;
+  @media all and (max-width: 1380px) {
+    font-size: 12px;
+    color: #fff;
+  }
 `;
 const ButtonTag = styled.button`
   margin-top: 8px;
